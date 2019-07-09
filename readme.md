@@ -52,6 +52,8 @@ Consulte o arquivo com as implementações.
 
 ` php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider" `
 
+` app/Http/Kernel.php:64 `
+
 Um arquivo (config\jwt.php) será criado
 
 Esse arquivo se encontra no link https://github.com/tymondesigns/jwt-auth/blob/develop/src/Providers/LaravelServiceProvider.php

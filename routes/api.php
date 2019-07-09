@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => 'auth:api'], function() {
+Route::group(['middleware' => ['auth:api', 'jwt.refresh']], function() {
     Route::get('products', function() {
         $all = \App\Product::all();
         return \App\Http\Resources\ProductResource::collection($all);
